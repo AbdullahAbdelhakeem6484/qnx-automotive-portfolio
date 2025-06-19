@@ -1,0 +1,66 @@
+# QNX Development Workspace .gitignore
+
+# Build artifacts
+*.o
+*.a
+*.so
+*.elf
+*.bin
+*.img
+*.ifs
+*.pinfo
+*.sym
+*.map
+build/
+dist/
+.dist/
+
+# QNX specific
+.qnx/
+*.qnx
+*.core
+*.usage
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.orig
+
+# Logs
+*.log
+logs/
+
+# Dependencies
+node_modules/
+.npm
+.yarn/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Documentation builds
+docs/_build/
+*.pdf.bak
+
+# Test artifacts
+test_results/
+coverage/
+*.gcov
+*.gcda
+*.gcno
+
+# Backup files
+*~
+*.backup 
