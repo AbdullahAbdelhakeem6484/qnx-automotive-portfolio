@@ -38,7 +38,7 @@ A comprehensive portfolio demonstrating progressive expertise in QNX real-time o
 ### Getting Started
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/qnx-automotive-portfolio.git
+git clone https://github.com/AbdullahAbdelhakeem6484/qnx-automotive-portfolio.git
 cd qnx-automotive-portfolio
 
 # Start with the beginner project
@@ -100,9 +100,9 @@ make clean
 
 ## 📞 Contact & Professional Links
 
-- **LinkedIn**: [Your Professional Profile](https://linkedin.com/in/your-profile)
-- **Email**: your.email@domain.com
-- **Portfolio**: [Your Professional Website](https://your-portfolio.com)
+- **LinkedIn**: [Here](https://www.linkedin.com/in/abdullah-abdelhakeem-3b5338116/)
+- **Email**: abdullah.abdelhakeem25@gmail.com
+- **Portfolio**: [Your Website](https://abdullahabdelhakeem6484.github.io/)
 
 ## 📄 License
 

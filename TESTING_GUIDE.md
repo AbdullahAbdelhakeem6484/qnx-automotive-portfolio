@@ -141,5 +141,5 @@ sudo usermod -a -G gpio $USER
 
 ## 👥 Contributors
 
-- **Abdullah Abdelhakeem** - abdullah.abdelhakeem657@gmail.com
+- **Abdullah Abdelhakeem** - abdullah.abdelhakeem25@gmail.com
 - **Sara Elsaied** - Sara.ahmed.elsaied@gmail.com 

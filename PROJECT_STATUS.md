@@ -8,7 +8,7 @@
 ## 👥 Contributors
 
 - **Abdullah Abdelhakeem** - abdullah.abdelhakeem657@gmail.com (Owner & Lead Developer)
-- **Sara Elsaied** - Sara.ahmed.elsaied@gmail.com (Contributor & Developer)
+- **Sara Elsaied** - Sara.ahmed.elsaied@gmail.com (Contributor & Lead Developer)
 
 ## 📋 Overall Portfolio Status
 
