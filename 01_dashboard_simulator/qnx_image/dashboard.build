@@ -1,0 +1,57 @@
+[virtual=x86_64,bios +compress] dashboard.ifs = {
+
+# Bootstrap section
+[+script] startup-script = {
+    echo "🚀 Starting QNX Dashboard Simulator..."
+    export SYSNAME=nto
+    export TERM=qansi-m
+    export PATH=/proc/boot:/bin:/usr/bin:/sbin
+    export LD_LIBRARY_PATH=/proc/boot:/lib:/usr/lib
+    
+    # Start system services
+    procnto-smp-instr -v
+    
+    # Start console devices
+    devc-con -e -n4 &
+    sleep 1
+    
+    # Set up console for dashboard
+    echo "🖥️  Setting up console for dashboard..."
+    stty raw -echo
+    
+    # Start our dashboard applications
+    echo "🎨 Starting GUI Dashboard..."
+    /proc/boot/gui_dashboard &
+    
+    # Keep system running
+    [+session] sh &
+}
+
+# System files (minimal set)
+[data=follow]
+
+# Basic system components
+procnto-smp-instr
+startup-bios
+devc-con
+sh
+
+# System libraries
+libc.so
+libm.so
+
+# Our dashboard application
+../gui_dashboard
+
+# Configuration files
+../resources/config/dashboard.conf = dashboard.conf
+
+[data=copy]
+C:\QNX\qnx800\target\qnx7\x86_64\boot\sys\procnto-smp-instr
+C:\QNX\qnx800\target\qnx7\x86_64\boot\sys\startup-bios  
+C:\QNX\qnx800\target\qnx7\x86_64\boot\sys\devc-con
+C:\QNX\qnx800\target\qnx7\x86_64\bin\sh
+C:\QNX\qnx800\target\qnx7\x86_64\lib\libc.so
+C:\QNX\qnx800\target\qnx7\x86_64\lib\libm.so
+
+} 

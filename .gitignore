@@ -1,66 +1,66 @@
-# QNX Development Workspace .gitignore
+# QNX Automotive Projects Portfolio - .gitignore
 
 # Build artifacts
-*.o
-*.a
-*.so
-*.elf
-*.bin
-*.img
-*.ifs
-*.pinfo
-*.sym
-*.map
 build/
-dist/
-.dist/
+*.o
+*.obj
+*.exe
+*.dll
+*.so
+*.a
+*.lib
 
 # QNX specific
-.qnx/
 *.qnx
-*.core
-*.usage
+*.ifs
+*.bin
+*.img
 
-# IDE and editor files
+# IDE files
 .vscode/
 .idea/
 *.swp
 *.swo
 *~
+
+# OS specific
 .DS_Store
 Thumbs.db
+desktop.ini
 
 # Temporary files
 *.tmp
 *.temp
-*.bak
-*.orig
-
-# Logs
 *.log
-logs/
+*.bak
 
-# Dependencies
-node_modules/
-.npm
-.yarn/
+# QEMU images
+*.qcow2
+*.vmdk
+*.vdi
+
+# Documentation builds
+docs/_build/
+docs/html/
+
+# Test outputs
+test_results/
+coverage/
 
 # Environment files
 .env
 .env.local
-.env.*.local
-
-# Documentation builds
-docs/_build/
-*.pdf.bak
-
-# Test artifacts
-test_results/
-coverage/
-*.gcov
-*.gcda
-*.gcno
 
 # Backup files
-*~
-*.backup 
+*.backup
+*.old
+
+# QNX Momentics
+.project
+.settings/
+*.launch
+
+# Executables (keep source, ignore compiled)
+console_dashboard
+gui_dashboard
+*.elf 
