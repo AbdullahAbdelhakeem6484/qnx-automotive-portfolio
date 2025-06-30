@@ -1,0 +1,9 @@
+# QNX Dashboard Demo Boot Script 
+echo "🚀 QNX Dashboard Simulator v1.0" 
+echo "=================================" 
+echo "Virtual QNX Environment" 
+echo "Dashboard Applications Ready" 
+echo "" 
+echo "To run dashboard:" 
+echo "1. ./console_dashboard" 
+echo "2. ./gui_dashboard" 

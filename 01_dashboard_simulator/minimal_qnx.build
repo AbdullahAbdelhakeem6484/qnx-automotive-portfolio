@@ -1,0 +1,8 @@
+[virtual=x86_64,bios +compress] minimal_qnx.ifs = {
+
+# Include our dashboard applications
+[data=copy]
+console_dashboard=/proc/boot/console_dashboard
+gui_dashboard=/proc/boot/gui_dashboard
+
+} 

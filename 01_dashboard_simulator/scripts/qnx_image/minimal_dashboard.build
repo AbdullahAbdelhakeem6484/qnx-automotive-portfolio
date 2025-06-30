@@ -1,0 +1,19 @@
+[virtual=x86_64,bios +compress] minimal_dashboard.ifs = {
+
+[+script] startup-script = {
+    export SYSNAME=nto
+    export TERM=qansi
+    export PATH=/proc/boot:/bin:/usr/bin:/sbin
+    export LD_LIBRARY_PATH=/proc/boot:/lib:/usr/lib
+    
+    echo "QNX Dashboard Simulator Boot"
+    echo "=============================="
+    
+    # Start basic shell
+    [+session] sh &
+}
+
+# Minimal system - just what we need for demo
+[data=c]
+
+} 

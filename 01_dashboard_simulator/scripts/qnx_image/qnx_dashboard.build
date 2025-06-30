@@ -1,0 +1,30 @@
+[virtual=x86_64,bios +compress] qnx_dashboard.ifs 
+ 
+[+script] startup-script = { 
+    export SYSNAME=nto 
+    export TERM=qansi 
+    export PATH=/proc/boot:/bin:/usr/bin 
+    export LD_LIBRARY_PATH=/proc/boot:/lib:/usr/lib 
+    procnto-smp-instr -v 
+    devc-con -e -n4 & 
+    devc-pty & 
+    Photon & 
+    sleep 2 
+    pwm & 
+    /bin/dashboard --config /etc/dashboard.conf & 
+    [+session] sh & 
+} 
+ 
+[data=copy] 
+C:\QNX\qnx800\target\qnx\x86_64\boot\sys\procnto-smp-instr 
+C:\QNX\qnx800\target\qnx\x86_64\boot\sys\startup-bios 
+C:\QNX\qnx800\target\qnx\x86_64\boot\sys\devc-con 
+C:\QNX\qnx800\target\qnx\x86_64\boot\sys\devc-pty 
+C:\QNX\qnx800\target\qnx\x86_64\usr\photon\bin\Photon 
+C:\QNX\qnx800\target\qnx\x86_64\usr\photon\bin\pwm 
+C:\QNX\qnx800\target\qnx\x86_64\bin\sh 
+C:\QNX\qnx800\target\qnx\x86_64\lib\libc.so 
+C:\QNX\qnx800\target\qnx\x86_64\lib\libm.so 
+C:\QNX\qnx800\target\qnx\x86_64\usr\lib\libph.so 
+..\01_dashboard_simulator\build\bin\qnx-dashboard-simulator-release-x86_64=/bin/dashboard 
+..\01_dashboard_simulator\resources\config\dashboard.conf=/etc/dashboard.conf 

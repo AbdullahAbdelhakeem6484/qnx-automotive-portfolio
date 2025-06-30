@@ -1,0 +1,39 @@
+[virtual=x86_64,bios +compress] qnx_dashboard_demo.ifs = {
+
+[+script] .script = {
+    echo "🚀 QNX Dashboard Simulator v1.0"
+    echo "================================"
+    echo "Starting QNX Real-time System..."
+    
+    # Basic environment
+    export PATH=/proc/boot
+    export SYSNAME=nto
+    
+    # Show system info
+    echo "✅ QNX Neutrino RTOS Loaded"
+    echo "✅ Dashboard Applications Ready"
+    echo "✅ Real-time Scheduling Active"
+    
+    # Start our applications
+    echo ""
+    echo "Starting Dashboard Applications:"
+    echo "1. Console Dashboard (Text Mode)"
+    echo "2. GUI Dashboard (Graphics Mode)"
+    
+    # Run console dashboard
+    /proc/boot/console_dashboard &
+    
+    # Wait a moment then run GUI
+    sleep 2
+    /proc/boot/gui_dashboard &
+    
+    # Keep system alive
+    sh
+}
+
+# Our dashboard executables
+[data=copy]
+console_dashboard=/proc/boot/console_dashboard
+gui_dashboard=/proc/boot/gui_dashboard
+
+} 

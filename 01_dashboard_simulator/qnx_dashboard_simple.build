@@ -1,0 +1,45 @@
+[virtual=x86_64,bios +compress] qnx_dashboard_simple.ifs = {
+
+[+script] startup-script = {
+    export SYSNAME=nto
+    export TERM=qansi
+    export PATH=/proc/boot:/bin:/usr/bin:/sbin
+    export LD_LIBRARY_PATH=/proc/boot:/lib:/usr/lib
+    
+    echo "🚀 QNX Dashboard Simulator Starting..."
+    echo "========================================"
+    
+    # Start basic system
+    procnto-smp-instr -v
+    
+    # Start console
+    devc-con -e -n4 &
+    sleep 1
+    
+    # Display system info
+    echo "QNX System Information:"
+    echo "- QNX Neutrino RTOS"
+    echo "- Dashboard Simulator v1.0"
+    echo "- Real-time Automotive System"
+    
+    # Start our dashboard
+    echo "Starting Dashboard Applications..."
+    
+    # Console dashboard (always works)
+    echo "🖥️  Console Dashboard:"
+    /proc/boot/console_dashboard &
+    
+    # GUI dashboard (if available)
+    echo "🎨 GUI Dashboard:"
+    /proc/boot/gui_dashboard &
+    
+    # Keep system running with shell
+    [+session] sh &
+}
+
+# Include our dashboard binaries
+[data=copy]
+console_dashboard=/proc/boot/console_dashboard
+gui_dashboard=/proc/boot/gui_dashboard
+
+} 
